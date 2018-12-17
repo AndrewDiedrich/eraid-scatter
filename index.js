@@ -42,7 +42,7 @@ app.use(passport.session());
 //immediately invokes authroutes function with express app;
 require('./routes/authRoutes')(app);
 
-
+require('./route/billingRoutes')(app);
 
 //production use process.env.port linked to heroku env variable, 
 //development use 5000, 

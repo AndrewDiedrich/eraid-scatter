@@ -8,11 +8,16 @@ module.exports = app => { //call with express app object
     }));
 
     //express app using passport to handle user information with callback from google
-    app.get('/auth/google/callback', passport.authenticate('google'));
+    app.get(
+        '/auth/google/callback',
+        passport.authenticate('google'),
+        (req, res) => { //after authentication go to /surveys
+            res.redirect('/surverys');
+        });
 
     app.get('/api/logout', (req, res) => {
         req.logout(); //takes cookie and kills id/cookie and no longer knows user
-        res.send(req.user);
+        res.redirect('/');
     });
 
     //function called whenever get request for  '/api/current_user' route 

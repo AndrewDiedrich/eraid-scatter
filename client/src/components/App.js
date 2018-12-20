@@ -5,9 +5,8 @@ import * as actions from '../actions';
 
 import Header from './Header';
 import Landing from './Landing';
-
-const Dashboard = () => <h2>Dashboard</h2>
-const SurveyNew = () => <h2>SurveyNew</h2>
+import Dashboard from './Dashboard';
+import SurveyNew from './surveys/SurveyNew';
 
 
 class App extends React.Component {
@@ -21,11 +20,11 @@ class App extends React.Component {
         return ( //header always displayed 
             <div className="container"> 
                 <BrowserRouter> 
-                    <div> 
+                    <div className="container"> 
                         <Header /> 
                         <Route path="/" exact component={Landing} />
-                        <Route path="/surverys" exact component={Dashboard} />
-                        <Route path="/surverys/new" exact component={SurveyNew} />
+                        <Route path="/surveys" exact component={Dashboard} />
+                        <Route path="/surveys/new" exact component={SurveyNew} />
                     </div>
                 </BrowserRouter>
             </div>

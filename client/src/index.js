@@ -8,6 +8,9 @@ import reduxThunk from 'redux-thunk';
 
 import App from './components/App';
 import reducers from './reducers';
+/***to test with axios post api/survey with out front end */
+import axios from 'axios';
+window.axios = axios;
 
 
 //combined reducers, state object, middleware

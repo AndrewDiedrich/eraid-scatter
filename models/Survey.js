@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 const RecipientSchema = require('./Recipient');
 
-const surverySchema = new Schema({
+const surveySchema = new Schema({
     title: String,
     body: String,
     subject: String,
@@ -16,4 +16,4 @@ const surverySchema = new Schema({
 });
 
 //name of model class/collection
-mongoose.model('surveys', surverySchema);
+mongoose.model('surveys', surveySchema);

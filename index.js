@@ -7,7 +7,7 @@ const keys = require('./config/keys');
 
 require('./models/User'); //must require model before passport calls user model
 //order of packages matter********
-require('/models/Survey');
+require('./models/Survey');
 require('./services/passport'); //just want to run it dont have to assign it 
 //const authRoutes = require('./routes/authRoutes');
 
@@ -47,6 +47,7 @@ app.use(passport.session());
 require('./routes/authRoutes')(app);
 
 require('./routes/billingRoutes')(app);
+require('./routes/surveyRoutes')(app);
 
 if (process.env.NODE_ENV === 'production') {
     // Express will serve up production assets

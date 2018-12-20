@@ -5,7 +5,7 @@ import * as actions from '../actions';
 
 class Payments extends React.Component {
     render() {
-        debugger;
+        //debugger;
         return (
             <StripeCheckout
                 name="Eraid"
